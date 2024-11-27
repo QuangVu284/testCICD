@@ -17,6 +17,7 @@ const upload = multer({ limits: { fieldSize: 10000000 } });
 router.get("/", async (req, res, next) => {
   try {
     // TODO:  pagination
+    // Test
     const col = (await connection).db().collection(STUDENT_PROFILE);
     const docs = await col.find({}).toArray();
     return res.json(docs);
