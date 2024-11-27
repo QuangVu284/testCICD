@@ -18,6 +18,7 @@ router.get("/", async (req, res, next) => {
   try {
     // TODO:  pagination
     // Test
+    // Test 2
     const col = (await connection).db().collection(STUDENT_PROFILE);
     const docs = await col.find({}).toArray();
     return res.json(docs);
